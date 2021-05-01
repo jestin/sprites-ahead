@@ -1,5 +1,5 @@
-#ifndef EDITOR_FRAME
-#define EDITOR_FRAME
+#ifndef EDITOR_FRAME_H
+#define EDITOR_FRAME_H
 
 #include <wx/wx.h>
 #include "canvas.h"
@@ -25,4 +25,4 @@ class EditorFrame : public wxMDIChildFrame
 		wxDECLARE_EVENT_TABLE();
 };
 
-#endif // EDITOR_FRAME
+#endif // EDITOR_FRAME_H

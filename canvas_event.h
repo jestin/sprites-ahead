@@ -1,5 +1,5 @@
-#ifndef wxCANVAS_EVENT
-#define wxCANVAS_EVENT
+#ifndef wxCANVAS_EVENT_H
+#define wxCANVAS_EVENT_H
 
 #include <wx/wx.h>
 
@@ -47,4 +47,4 @@ END_DECLARE_EVENT_TYPES()
 		(wxObject *) NULL ),
 
 
-#endif // wxCANVAS_EVENT
+#endif // wxCANVAS_EVENT_H

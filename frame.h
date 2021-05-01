@@ -1,3 +1,6 @@
+#ifndef MAIN_FRAME_H
+#define MAIN_FRAME_H
+
 #include <wx/wx.h>
 
 class MainFrame : public wxMDIParentFrame
@@ -15,3 +18,4 @@ class MainFrame : public wxMDIParentFrame
 		wxDECLARE_EVENT_TABLE();
 };
 
+#endif //MAIN_FRAME_H

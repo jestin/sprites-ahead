@@ -1,5 +1,5 @@
-#ifndef CANVAS
-#define CANVAS
+#ifndef CANVAS_H
+#define CANVAS_H
 
 #include <wx/wx.h>
 #include <wx/vscroll.h>
@@ -26,4 +26,4 @@ class Canvas : public wxHVScrolledWindow
 		wxDECLARE_EVENT_TABLE();
 };
 
-#endif // CANVAS
+#endif // CANVAS_H
