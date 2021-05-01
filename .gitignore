@@ -1,0 +1,15 @@
+# assembled binaries
+app
+*.o
+
+
+# vim stuff
+*.swp
+*.un~
+*.swo
+
+# code completion
+compile_commands.json
+
+# git stats
+stats/*
