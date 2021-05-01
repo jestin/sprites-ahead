@@ -31,7 +31,7 @@ MainFrame::MainFrame()
 
 
 	CreateStatusBar();
-	SetStatusText("Welcome to wxWidgets!");
+	SetStatusText("Welcome to Sprites Ahead!");
 }
 
 void MainFrame::OnMenuNew(wxCommandEvent& event)
