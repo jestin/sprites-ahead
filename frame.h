@@ -12,8 +12,6 @@ class MainFrame : public wxMDIParentFrame
 		void OnMenuExit(wxCommandEvent& event);
 		void OnMenuAbout(wxCommandEvent& event);
 
-		void OnSelectColor(wxCommandEvent& event);
-
 		wxDECLARE_EVENT_TABLE();
 };
 

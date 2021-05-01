@@ -20,6 +20,8 @@ class EditorFrame : public wxMDIChildFrame
 
 		void OnCloseWindow(wxCloseEvent &event);
 
+		void OnSelectColor(wxCommandEvent& event);
+
 		wxDECLARE_EVENT_TABLE();
 };
 
