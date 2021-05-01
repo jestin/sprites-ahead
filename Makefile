@@ -2,7 +2,7 @@ CXX = $(shell wx-config --cxx)
 WX_CXXFLAGS = $(shell wx-config --cxxflags) 
 WX_LIBS = $(shell wx-config --libs)
 
-PROGRAM = app
+PROGRAM = sprites-ahead
 OBJECTS := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 
 .SUFFIXES:	.o .cpp

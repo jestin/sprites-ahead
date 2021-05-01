@@ -10,7 +10,7 @@ wxBEGIN_EVENT_TABLE(Main, wxMDIParentFrame)
 wxEND_EVENT_TABLE()
 
 Main::Main()
-	: wxMDIParentFrame(NULL, wxID_ANY, "Sprite Editor")
+	: wxMDIParentFrame(NULL, wxID_ANY, "Sprites Ahead")
 {
 	// create menus
 	wxMenuBar *menuBar = new wxMenuBar;
@@ -102,8 +102,8 @@ void Main::OnMenuExit(wxCommandEvent& event)
 
 void Main::OnMenuAbout(wxCommandEvent& event)
 {
-	wxMessageBox("This is a wxWidgets Sprite Editor example",
-			"About Sprite Editor", wxOK | wxICON_INFORMATION);
+	wxMessageBox("If you have to ask, you're sprites behind",
+			"About Sprites Ahead", wxOK | wxICON_INFORMATION);
 	event.Skip();
 }
 
