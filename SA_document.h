@@ -4,6 +4,8 @@
 #include <wx/wx.h>
 #include <wx/docview.h>
 
+#include "SA_palette.h"
+
 class SADocument : public wxDocument
 {
 	DECLARE_DYNAMIC_CLASS(SADocument)
