@@ -18,4 +18,5 @@ SAPalette::SAPalette(SAPalette& palette)
 
 SAPalette::~SAPalette()
 {
+	WX_CLEAR_LIST(wxList, m_colors);
 }
