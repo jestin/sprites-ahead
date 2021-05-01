@@ -1,9 +1,9 @@
 #include <wx/wx.h>
 
-class Main : public wxMDIParentFrame
+class MainFrame : public wxMDIParentFrame
 {
 	public:
-		Main();
+		MainFrame();
 
 	private:
 		void OnMenuNew(wxCommandEvent& event);

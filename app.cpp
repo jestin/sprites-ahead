@@ -5,7 +5,7 @@ wxIMPLEMENT_APP(MyApp);
 
 bool MyApp::OnInit()
 {
-	Main * frame = new Main();
+	MainFrame * frame = new MainFrame();
 	frame->Show(true);
 	return true;
 }
