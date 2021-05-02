@@ -6,7 +6,7 @@
 class SAPalette : public wxObject
 {
 	public:
-		SAPalette();
+		SAPalette(int colors);
 		SAPalette(SAPalette& palette);
 		~SAPalette();
 
@@ -16,9 +16,11 @@ class SAPalette : public wxObject
 		wxInputStream& LoadObject(wxInputStream& stream);
 
 		// accessors
+		inline int GetNumColors() { return m_nColors; }
 		inline wxList& GetColors() { return m_colors; }
 
 	private:
+		int m_nColors;
 		wxList m_colors;
 };
 
