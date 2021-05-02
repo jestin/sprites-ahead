@@ -1,9 +1,7 @@
 #include "SA_sprite.h"
 
-SASprite::SASprite(wxSize& size)
+SASprite::SASprite()
 {
-	m_Size = size;
-	m_aPixels = new int[size.x * size.y];
 }
 
 SASprite::SASprite(SASprite& sprite)
@@ -22,14 +20,14 @@ SASprite::~SASprite()
 	delete[] m_aPixels;
 }
 
-wxOutputStream& SASprite::SaveObject(wxOutputStream &stream)
+std::ostream& SASprite::SaveObject(std::ostream& stream)
 {
 	// TODO
 
 	return stream;
 }
 
-wxInputStream& SASprite::LoadObject(wxInputStream &stream)
+std::istream& SASprite::LoadObject(std::istream &stream)
 {
 	// TODO
 

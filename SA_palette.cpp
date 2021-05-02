@@ -1,8 +1,7 @@
 #include "SA_palette.h"
 
-SAPalette::SAPalette(int colors)
+SAPalette::SAPalette()
 {
-	m_nColors = colors;
 }
 
 SAPalette::SAPalette(SAPalette& palette)
@@ -24,14 +23,14 @@ SAPalette::~SAPalette()
 	WX_CLEAR_LIST(wxList, m_colors);
 }
 
-wxOutputStream& SAPalette::SaveObject(wxOutputStream &stream)
+std::ostream& SAPalette::SaveObject(std::ostream &stream)
 {
 	// TODO
 
 	return stream;
 }
 
-wxInputStream& SAPalette::LoadObject(wxInputStream &stream)
+std::istream& SAPalette::LoadObject(std::istream &stream)
 {
 	// TODO
 

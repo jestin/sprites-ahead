@@ -6,14 +6,14 @@
 class SASprite : public wxObject
 {
 	public:
-		SASprite(wxSize& size);
+		SASprite();
 		SASprite(SASprite& palette);
 		~SASprite();
 
 		void Draw(wxDC* dc);
 
-		wxOutputStream& SaveObject(wxOutputStream& stream);
-		wxInputStream& LoadObject(wxInputStream& stream);
+		std::ostream& SaveObject(std::ostream& stream);
+		std::istream& LoadObject(std::istream& stream);
 
 		// accessors
 		inline int* GetPixels() { return m_aPixels; }

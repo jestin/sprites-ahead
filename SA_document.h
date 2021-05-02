@@ -5,6 +5,7 @@
 #include <wx/docview.h>
 
 #include "SA_palette.h"
+#include "SA_sprite.h"
 
 class SADocument : public wxDocument
 {
@@ -13,8 +14,8 @@ class SADocument : public wxDocument
 		SADocument();
 		~SADocument();
 
-		wxOutputStream& SaveObject(wxOutputStream& stream);
-		wxInputStream& LoadObject(wxInputStream& stream);
+		std::ostream& SaveObject(std::ostream& stream);
+		std::istream& LoadObject(std::istream& stream);
 
 		// accessors
 		inline wxList& GetPalettes() { return m_Palettes; };

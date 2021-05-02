@@ -6,14 +6,14 @@
 class SAPalette : public wxObject
 {
 	public:
-		SAPalette(int colors);
+		SAPalette();
 		SAPalette(SAPalette& palette);
 		~SAPalette();
 
 		void Draw(wxDC* dc);
 
-		wxOutputStream& SaveObject(wxOutputStream& stream);
-		wxInputStream& LoadObject(wxInputStream& stream);
+		std::ostream& SaveObject(std::ostream& stream);
+		std::istream& LoadObject(std::istream& stream);
 
 		// accessors
 		inline int GetNumColors() { return m_nColors; }
