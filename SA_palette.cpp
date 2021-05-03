@@ -33,9 +33,9 @@ std::ostream& SAPalette::SaveObject(std::ostream &stream)
 	while(node)
 	{
 		wxColor* color = (wxColor *) node->GetData();
-		stream << color->Red() << '\n';
-		stream << color->Green() << '\n';
-		stream << color->Blue() << '\n';
+		stream << (wxInt32) color->Red() << '\n';
+		stream << (wxInt32) color->Green() << '\n';
+		stream << (wxInt32) color->Blue() << '\n';
 
 		node = node->GetNext();
 	}
@@ -49,7 +49,7 @@ std::istream& SAPalette::LoadObject(std::istream &stream)
 
 	for(int i = 0; i < m_nColors; i++)
 	{
-		int r, g, b;
+		wxInt32 r, g, b;
 
 		stream >> r;
 		stream >> g;
