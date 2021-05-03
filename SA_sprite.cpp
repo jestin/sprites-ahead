@@ -22,14 +22,30 @@ SASprite::~SASprite()
 
 std::ostream& SASprite::SaveObject(std::ostream& stream)
 {
-	// TODO
+	stream << m_Size.GetWidth() << '\n' << m_Size.GetHeight() << '\n';
+
+	for(int i = 0; i < m_Size.GetWidth() * m_Size.GetHeight(); i++) 
+	{
+		stream << m_aPixels[i] << '\n';
+	}
+	stream << '\n';
 
 	return stream;
 }
 
 std::istream& SASprite::LoadObject(std::istream &stream)
 {
-	// TODO
+	int w, h;
+
+	stream >> w;
+	stream >> h;
+
+	m_Size = wxSize(w, h);
+
+	for(int i = 0; i < w * h; i++)
+	{
+		stream >> m_aPixels[i];
+	}
 
 	return stream;
 }
