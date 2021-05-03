@@ -25,6 +25,8 @@ std::ostream& SADocument::SaveObject(std::ostream &stream)
 	{
 		SAPalette* palette = (SAPalette *) node->GetData();
 		palette->SaveObject(stream);
+
+		node = node->GetNext();
 	}
 
 	// save sprites
@@ -36,6 +38,8 @@ std::ostream& SADocument::SaveObject(std::ostream &stream)
 	{
 		SASprite* sprite = (SASprite *) node->GetData();
 		sprite->SaveObject(stream);
+
+		node = node->GetNext();
 	}
 
 	return stream;

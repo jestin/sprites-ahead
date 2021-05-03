@@ -25,14 +25,38 @@ SAPalette::~SAPalette()
 
 std::ostream& SAPalette::SaveObject(std::ostream &stream)
 {
-	// TODO
+	stream << m_nColors << '\n';
+
+	// assume that m_nColors is correct, otherwise there are bigger issues
+	wxList::compatibility_iterator node = m_colors.GetFirst();
+
+	while(node)
+	{
+		wxColor* color = (wxColor *) node->GetData();
+		stream << color->Red() << ' ';
+		stream << color->Green() << ' ';
+		stream << color->Blue() << '\n';
+
+		node = node->GetNext();
+	}
 
 	return stream;
 }
 
 std::istream& SAPalette::LoadObject(std::istream &stream)
 {
-	// TODO
+	stream >> m_nColors;
+
+	for(int i = 0; i < m_nColors; i++)
+	{
+		int r, g, b;
+
+		stream >> r;
+		stream >> g;
+		stream >> b;
+
+		m_colors.Append(new wxColor(r, g, b));
+	}
 
 	return stream;
 }
