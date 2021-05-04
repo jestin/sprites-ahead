@@ -47,7 +47,7 @@ std::istream& SAPalette::LoadObject(std::istream &stream)
 {
 	stream >> m_nColors;
 
-	for(int i = 0; i < m_nColors; i++)
+	for(int8_t i = 0; i < m_nColors; i++)
 	{
 		wxInt32 r, g, b;
 
