@@ -16,7 +16,7 @@ class SAPalette : public wxObject
 		std::istream& LoadObject(std::istream& stream);
 
 		// accessors
-		inline int GetNumColors() { return m_nColors; }
+		inline int GetNumColors() const { return m_nColors; }
 		inline wxList& GetColors() { return m_colors; }
 
 	private:

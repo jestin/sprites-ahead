@@ -16,7 +16,7 @@ class SASprite : public wxObject
 		std::istream& LoadObject(std::istream& stream);
 
 		// accessors
-		inline int* GetPixels() { return m_aPixels; }
+		inline int* GetPixels() const { return m_aPixels; }
 		inline wxSize& GetSize() { return m_Size; }
 
 	private:
