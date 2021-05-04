@@ -32,12 +32,15 @@ bool PaletteSetSizeCommand::DoOrUndo(PaletteSetSizeOperation op)
 {
 	wxASSERT(m_pPalette != NULL);
 
-	// in both cases, store the previous value so the command can be undone or
-	// redone
+	// in both cases, set m_nColors to the previous value so the command can be
+	// undone or redone
 	int8_t nPrev = m_pPalette->GetNumColors();
 	m_pPalette->SetNumColors(m_nColors);
 	m_nColors = nPrev;
 
+	// do not change the size of the palette's colors list, or else we will
+	// need to store that information too.  Instead, leave it alone and check
+	// the size on other palette operations
 
 	m_pDoc->Modify(true);
 	m_pDoc->UpdateAllViews();
