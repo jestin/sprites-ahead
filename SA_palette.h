@@ -19,12 +19,11 @@ class SAPalette : public wxObject
 		inline int8_t GetNumColors() const { return m_nColors; }
 		void SetNumColors(int8_t nColors);
 
-		inline wxColor* GetColors() { return m_aColors; }
+		inline std::vector<wxColor> GetColors() { return m_aColors; }
 
 	private:
 		int8_t m_nColors;
-		wxColor* m_aColors;
-		int8_t m_nBufSize;
+		std::vector<wxColor> m_aColors;
 };
 
 #endif // SA_PALETTE_H

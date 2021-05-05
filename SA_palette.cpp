@@ -7,8 +7,6 @@ SAPalette::SAPalette()
 SAPalette::SAPalette(SAPalette& palette)
 {
 	m_nColors = palette.GetNumColors();
-	
-	m_aColors = (wxColor *) malloc(sizeof(wxColor) * m_nColors);
 
 	for(int i = 0; i < m_nColors; i++)
 	{
@@ -19,23 +17,19 @@ SAPalette::SAPalette(SAPalette& palette)
 
 SAPalette::~SAPalette()
 {
-	free(m_aColors);
 }
 
 void SAPalette::SetNumColors(int8_t nColors)
 {
-	// resize the array if larger
-	if(nColors > m_nColors)
+	// fill undefined palette space with black
+	for(int i = m_nColors; i < nColors; i++)
 	{
-		wxColor* newArray = (wxColor *) malloc(sizeof(wxColor) * m_nColors);
-
-		for(int i = 0; i < nColors; i++)
+		if(m_aColors.size() == i)
 		{
-			newArray[i] = (i < m_nColors) ? wxColor(m_aColors[i]) : wxColor();
+			m_aColors.push_back(wxColor(0, 0, 0));
 		}
 
-		free(m_aColors);
-		m_aColors = newArray;
+		// existing values will remain so resize undos work
 	}
 
 	m_nColors = nColors;
