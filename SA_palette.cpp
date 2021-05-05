@@ -7,7 +7,6 @@ SAPalette::SAPalette()
 SAPalette::SAPalette(SAPalette& palette)
 {
 	m_nColors = palette.GetNumColors();
-	m_nBufSize = m_nColors;
 	
 	m_aColors = (wxColor *) malloc(sizeof(wxColor) * m_nColors);
 
