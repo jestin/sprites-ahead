@@ -28,7 +28,6 @@ class PaletteSetSizeCommand : public wxCommand
 	protected:
 		bool DoOrUndo(PaletteSetSizeOperation op);
 
-
 	private:
 		SAPalette* m_pPalette;
 		SADocument* m_pDoc;

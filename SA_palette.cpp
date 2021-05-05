@@ -6,38 +6,52 @@ SAPalette::SAPalette()
 
 SAPalette::SAPalette(SAPalette& palette)
 {
-	wxList::compatibility_iterator node = palette.GetColors().GetFirst();
-
 	m_nColors = palette.GetNumColors();
+	m_nBufSize = m_nColors;
+	
+	m_aColors = (wxColor *) malloc(sizeof(wxColor) * m_nColors);
 
-	while(node)
+	for(int i = 0; i < m_nColors; i++)
 	{
-		wxColor* color = (wxColor *) node->GetData();
-		wxColor* newColor = new wxColor(*color);
-		GetColors().Append(newColor);
+		wxColor color = palette.GetColors()[i];
+		GetColors()[i] = wxColor(color);
 	}
 }
 
 SAPalette::~SAPalette()
 {
-	WX_CLEAR_LIST(wxList, m_colors);
+	free(m_aColors);
+}
+
+void SAPalette::SetNumColors(int8_t nColors)
+{
+	// resize the array if larger
+	if(nColors > m_nColors)
+	{
+		wxColor* newArray = (wxColor *) malloc(sizeof(wxColor) * m_nColors);
+
+		for(int i = 0; i < nColors; i++)
+		{
+			newArray[i] = (i < m_nColors) ? wxColor(m_aColors[i]) : wxColor();
+		}
+
+		free(m_aColors);
+		m_aColors = newArray;
+	}
+
+	m_nColors = nColors;
 }
 
 std::ostream& SAPalette::SaveObject(std::ostream &stream)
 {
 	stream << m_nColors << '\n';
 
-	// assume that m_nColors is correct, otherwise there are bigger issues
-	wxList::compatibility_iterator node = m_colors.GetFirst();
-
-	while(node)
+	for(int i = 0; i < m_nColors; i++)
 	{
-		wxColor* color = (wxColor *) node->GetData();
-		stream << (wxInt32) color->Red() << '\n';
-		stream << (wxInt32) color->Green() << '\n';
-		stream << (wxInt32) color->Blue() << '\n';
-
-		node = node->GetNext();
+		wxColor color = m_aColors[i];
+		stream << (wxInt32) color.Red() << '\n';
+		stream << (wxInt32) color.Green() << '\n';
+		stream << (wxInt32) color.Blue() << '\n';
 	}
 
 	return stream;
@@ -55,7 +69,7 @@ std::istream& SAPalette::LoadObject(std::istream &stream)
 		stream >> g;
 		stream >> b;
 
-		m_colors.Append(new wxColor(r, g, b));
+		GetColors()[i] = wxColor(r, g, b);
 	}
 
 	return stream;

@@ -38,7 +38,7 @@ bool PaletteSetSizeCommand::DoOrUndo(PaletteSetSizeOperation op)
 	m_pPalette->SetNumColors(m_nColors);
 	m_nColors = nPrev;
 
-	// do not change the size of the palette's colors list, or else we will
+	// do not change the size of the palette's colors array, or else we will
 	// need to store that information too.  Instead, leave it alone and check
 	// the size on other palette operations
 

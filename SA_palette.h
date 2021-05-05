@@ -17,13 +17,14 @@ class SAPalette : public wxObject
 
 		// accessors
 		inline int8_t GetNumColors() const { return m_nColors; }
-		inline void SetNumColors(int8_t nColors) { m_nColors = nColors; }
+		void SetNumColors(int8_t nColors);
 
-		inline wxList& GetColors() { return m_colors; }
+		inline wxColor* GetColors() { return m_aColors; }
 
 	private:
 		int8_t m_nColors;
-		wxList m_colors;
+		wxColor* m_aColors;
+		int8_t m_nBufSize;
 };
 
 #endif // SA_PALETTE_H
