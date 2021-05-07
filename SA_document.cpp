@@ -4,6 +4,7 @@ IMPLEMENT_DYNAMIC_CLASS(SADocument, wxDocument)
 
 SADocument::SADocument()
 {
+	m_nActivePalette = 0;
 }
 
 SADocument::~SADocument()

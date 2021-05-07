@@ -15,7 +15,6 @@ PaletteSetSizeCommand::PaletteSetSizeCommand(const wxString& name,
 
 PaletteSetSizeCommand::~PaletteSetSizeCommand()
 {
-	m_nColors = 0;
 }
 
 bool PaletteSetSizeCommand::Do()

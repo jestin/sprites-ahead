@@ -21,11 +21,18 @@ class SADocument : public wxDocument
 		inline wxList& GetPalettes() { return m_Palettes; };
 		inline wxList& GetSprites() { return m_Sprites; };
 
+		inline int8_t GetActivePalette() { return m_nActivePalette; }
+		inline void SetActivePalette(int8_t nActivePalette)
+		{
+			m_nActivePalette = nActivePalette;
+		}
+
 	private:
 
 		// objects managed by this document
 		wxList m_Palettes;
 		wxList m_Sprites;
+		int8_t m_nActivePalette;
 };
 
 #endif // SA_DOCUMENT_H
