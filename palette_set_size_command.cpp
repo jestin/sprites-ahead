@@ -27,7 +27,7 @@ bool PaletteSetSizeCommand::Undo()
 	return DoOrUndo(m_op);
 }
 
-bool PaletteSetSizeCommand::DoOrUndo(PaletteSetSizeOperation op)
+bool PaletteSetSizeCommand::DoOrUndo(PaletteSetSizeOperation WXUNUSED(op))
 {
 	wxASSERT(m_pPalette != NULL);
 

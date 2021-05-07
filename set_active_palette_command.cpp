@@ -23,7 +23,7 @@ bool SetActivePaletteCommand::Undo()
 	return DoOrUndo(m_op);
 }
 
-bool SetActivePaletteCommand::DoOrUndo(SetActivePaletteOperation op)
+bool SetActivePaletteCommand::DoOrUndo(SetActivePaletteOperation WXUNUSED(op))
 {
 	wxASSERT(m_pDoc != NULL);
 

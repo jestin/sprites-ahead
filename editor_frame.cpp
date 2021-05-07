@@ -2,10 +2,10 @@
 
 #define ID_SLIDER 20001
 
-	wxBEGIN_EVENT_TABLE(EditorFrame, wxMDIChildFrame)
+BEGIN_EVENT_TABLE(EditorFrame, wxMDIChildFrame)
 	EVT_CLOSE(EditorFrame::OnCloseWindow)
 	EVT_CANVAS_ZOOM_CHANGED(wxID_ANY, EditorFrame::OnZoomChanged)
-wxEND_EVENT_TABLE()
+END_EVENT_TABLE()
 
 EditorFrame::EditorFrame(wxMDIParentFrame *parent, wxString name)
 	: wxMDIChildFrame(parent, wxID_ANY, name)
