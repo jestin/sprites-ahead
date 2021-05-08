@@ -13,6 +13,8 @@ class SAPaletteCanvas : public wxHVScrolledWindow
 
 		// Overrides
 		virtual void OnDraw(wxDC& dc);
+		virtual wxCoord OnGetRowHeight(size_t row) const { return wxCoord(20); }
+		virtual wxCoord OnGetColumnWidth(size_t row) const { return wxCoord(20); }
 
 		// Accessors
 		void SetView(SAPaletteView* pView) { m_pView = pView; }

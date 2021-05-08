@@ -9,7 +9,8 @@ class MainFrame : public wxMDIParentFrame
 		MainFrame();
 
 	private:
-		void OnMenuNew(wxCommandEvent& event);
+		void OnMenuNewSprite(wxCommandEvent& event);
+		void OnMenuNewPalette(wxCommandEvent& event);
 		void OnMenuOpen(wxCommandEvent& event);
 		void OnMenuSave(wxCommandEvent& event);
 		void OnMenuExit(wxCommandEvent& event);

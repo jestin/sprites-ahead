@@ -1,8 +1,12 @@
 #include "frame.h"
 #include "editor_frame.h"
+#include "SA_palette_frame.h"
+
+#define ID_NEW_PALETTE 20001
 
 wxBEGIN_EVENT_TABLE(MainFrame, wxMDIParentFrame)
-	EVT_MENU(wxID_NEW, MainFrame::OnMenuNew)
+	EVT_MENU(wxID_NEW, MainFrame::OnMenuNewSprite)
+	EVT_MENU(ID_NEW_PALETTE, MainFrame::OnMenuNewPalette)
 	EVT_MENU(wxID_OPEN, MainFrame::OnMenuOpen)
 	EVT_MENU(wxID_SAVE, MainFrame::OnMenuSave)
 	EVT_MENU(wxID_ABOUT, MainFrame::OnMenuAbout)
@@ -17,7 +21,8 @@ MainFrame::MainFrame()
 	SetMenuBar(menuBar);
 
 	wxMenu *menuFile = new wxMenu;
-	menuFile->Append(wxID_NEW, "&New");
+	menuFile->Append(wxID_NEW, "&New Sprite");
+	menuFile->Append(ID_NEW_PALETTE, "New &Palette");
 	menuFile->Append(wxID_OPEN, "&Open");
 	menuFile->Append(wxID_SAVE, "&Save");
 	menuFile->AppendSeparator();
@@ -34,9 +39,16 @@ MainFrame::MainFrame()
 	SetStatusText("Welcome to Sprites Ahead!");
 }
 
-void MainFrame::OnMenuNew(wxCommandEvent& event)
+void MainFrame::OnMenuNewSprite(wxCommandEvent& event)
 {
 	EditorFrame *f = new EditorFrame(this, "Test");
+	f->Show();
+	event.Skip();
+}
+
+void MainFrame::OnMenuNewPalette(wxCommandEvent& event)
+{
+	SAPaletteFrame *f = new SAPaletteFrame(this, "Test");
 	f->Show();
 	event.Skip();
 }

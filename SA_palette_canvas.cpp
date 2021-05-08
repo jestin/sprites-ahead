@@ -7,6 +7,7 @@ END_EVENT_TABLE()
 SAPaletteCanvas::SAPaletteCanvas(wxWindow *parent)
 	: wxHVScrolledWindow(parent)
 {
+	m_pView = NULL;
 }
 
 SAPaletteCanvas::~SAPaletteCanvas()

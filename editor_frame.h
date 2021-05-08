@@ -22,7 +22,7 @@ class EditorFrame : public wxMDIChildFrame
 
 		void OnSelectColor(wxCommandEvent& event);
 
-		wxDECLARE_EVENT_TABLE();
+		DECLARE_EVENT_TABLE();
 };
 
 #endif // EDITOR_FRAME_H

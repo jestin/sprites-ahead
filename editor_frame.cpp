@@ -1,7 +1,5 @@
 #include "editor_frame.h"
 
-#define ID_SLIDER 20001
-
 BEGIN_EVENT_TABLE(EditorFrame, wxMDIChildFrame)
 	EVT_CLOSE(EditorFrame::OnCloseWindow)
 	EVT_CANVAS_ZOOM_CHANGED(wxID_ANY, EditorFrame::OnZoomChanged)
