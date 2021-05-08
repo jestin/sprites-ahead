@@ -23,7 +23,7 @@ class Canvas : public wxHVScrolledWindow
 		void OnPaint(wxPaintEvent& event);
 		void OnMouseWheel(wxMouseEvent& event);
 
-		wxDECLARE_EVENT_TABLE();
+		DECLARE_EVENT_TABLE();
 };
 
 #endif // CANVAS_H

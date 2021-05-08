@@ -22,6 +22,7 @@ bool SAPaletteView::OnCreate(wxDocument *pDoc, long flags)
 
 void SAPaletteView::OnDraw(wxDC* pDC)
 {
+	pDC->Clear();
 }
 
 void SAPaletteView::OnUpdate(wxView *pSender, wxObject *pHint)
