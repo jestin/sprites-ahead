@@ -7,6 +7,9 @@
 #include "palette_set_size_command.h"
 #include "palette_set_color_command.h"
 
+// forward declare to avoid circular reference
+class SAPaletteFrame;
+
 class SAPaletteView : public wxView
 {
 	DECLARE_DYNAMIC_CLASS(SAPaletteView)
@@ -27,6 +30,7 @@ class SAPaletteView : public wxView
 
 	private:
 		SAPalette* m_pPalette;
+		SAPaletteFrame* m_pFrame;
 };
 
 #endif // SAPALETTEVIEW_H

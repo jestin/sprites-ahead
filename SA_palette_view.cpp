@@ -9,6 +9,7 @@ END_EVENT_TABLE()
 
 SAPaletteView::SAPaletteView()
 {
+	m_pFrame = NULL;
 }
 
 SAPaletteView::~SAPaletteView()
