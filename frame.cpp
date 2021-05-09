@@ -22,7 +22,7 @@ MainFrame::MainFrame()
 
 	wxMenu *menuFile = new wxMenu;
 	menuFile->Append(wxID_NEW, "&New Sprite");
-	menuFile->Append(ID_NEW_PALETTE, "New &Palette");
+	menuFile->Append(ID_NEW_PALETTE, "New &Palette\tCtrl+P");
 	menuFile->Append(wxID_OPEN, "&Open");
 	menuFile->Append(wxID_SAVE, "&Save");
 	menuFile->AppendSeparator();
