@@ -4,11 +4,9 @@
 #include <wx/wx.h>
 #include <wx/docview.h>
 #include "SA_document.h"
+#include "SA_palette_frame.h"
 #include "palette_set_size_command.h"
 #include "palette_set_color_command.h"
-
-// forward declare to avoid circular reference
-class SAPaletteFrame;
 
 class SAPaletteView : public wxView
 {

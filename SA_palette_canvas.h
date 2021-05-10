@@ -5,6 +5,8 @@
 #include <wx/vscroll.h>
 #include "SA_palette_view.h"
 
+class SAPaletteView;
+
 class SAPaletteCanvas : public wxHVScrolledWindow
 {
 	public:

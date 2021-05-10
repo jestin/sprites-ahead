@@ -18,6 +18,7 @@ SAPaletteView::~SAPaletteView()
 
 bool SAPaletteView::OnCreate(wxDocument *pDoc, long flags)
 {
+	// Associate the correct frame with this view
 	return true;
 }
 
@@ -28,6 +29,10 @@ void SAPaletteView::OnDraw(wxDC* pDC)
 
 void SAPaletteView::OnUpdate(wxView *pSender, wxObject *pHint)
 {
+	if(m_pFrame && m_pFrame->GetCanvas())
+	{
+		m_pFrame->GetCanvas()->Refresh();
+	}
 }
 
 bool SAPaletteView::OnClose(bool WXUNUSED(deleteWindow))
