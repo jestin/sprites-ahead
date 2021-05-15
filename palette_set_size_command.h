@@ -1,5 +1,5 @@
-#ifndef PALETTECOMMAND_H
-#define PALETTECOMMAND_H
+#ifndef PALETTE_SET_SIZE_COMMAND_H
+#define PALETTE_SET_SIZE_COMMAND_H
 
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
@@ -35,5 +35,5 @@ class PaletteSetSizeCommand : public wxCommand
 		int8_t m_nColors;
 };
 
-#endif // PALETTECOMMAND_H
+#endif // PALETTE_SET_SIZE_COMMAND_H
 
