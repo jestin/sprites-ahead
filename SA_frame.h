@@ -1,12 +1,14 @@
-#ifndef MAIN_FRAME_H
-#define MAIN_FRAME_H
+#ifndef SA_FRAME_H
+#define SA_FRAME_H
 
 #include <wx/wx.h>
 
-class MainFrame : public wxMDIParentFrame
+class SAFrame;
+
+class SAFrame : public wxMDIParentFrame
 {
 	public:
-		MainFrame();
+		SAFrame();
 
 	private:
 		void OnMenuNewSprite(wxCommandEvent& event);

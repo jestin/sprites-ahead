@@ -1,5 +1,5 @@
 #include "app.h"
-#include "frame.h"
+#include "SA_frame.h"
 #include "SA_document.h"
 #include "SA_palette_view.h"
 
@@ -25,7 +25,7 @@ bool MyApp::OnInit()
 	wxFileName::MacRegisterDefaultTypeAndCreator(wxT("pfh"), 'WXMB', 'WXMA');
 #endif
 
-	MainFrame * frame = new MainFrame();
+	SAFrame * frame = new SAFrame();
 	frame->Show(true);
 	return true;
 }
