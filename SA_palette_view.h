@@ -8,6 +8,8 @@
 #include "palette_set_size_command.h"
 #include "palette_set_color_command.h"
 
+class SAPaletteFrame;
+
 class SAPaletteView : public wxView
 {
 	DECLARE_DYNAMIC_CLASS(SAPaletteView)

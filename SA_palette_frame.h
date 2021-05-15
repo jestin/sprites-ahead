@@ -4,6 +4,8 @@
 #include <wx/wx.h>
 #include "SA_palette_canvas.h"
 
+class SAPaletteCanvas;
+
 class SAPaletteFrame : public wxMDIChildFrame
 {
 	public:
