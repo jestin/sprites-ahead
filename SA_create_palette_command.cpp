@@ -35,7 +35,9 @@ bool SACreatePaletteCommand::DoOrUndo(CreatePaletteOperation op)
 			m_pDoc->GetPalettes().Append(new SAPalette());
 			break;
 		case UNDO_CREATE_PALETTE:
-			SAPalette* pTemp = (SAPalette *) m_pDoc->GetPalettes().GetLast()->GetData();
+			wxObjectListNode* node = m_pDoc->GetPalettes().GetLast();
+			if(node == NULL) break;
+			SAPalette* pTemp = (SAPalette *) node->GetData();
 			m_pDoc->GetPalettes().pop_back();
 			delete pTemp;
 			break;
