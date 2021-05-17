@@ -3,6 +3,9 @@
 
 #include <wx/wx.h>
 #include <wx/docview.h>
+#include "SA_frame.h"
+
+class SAFrame;
 
 class SAView : public wxView
 {
@@ -19,8 +22,11 @@ class SAView : public wxView
 		virtual void OnUpdate(wxView* pSender, wxObject* pHint = NULL);
 		virtual bool OnClose(bool deleteWindow = true);
 
+		// Event Handlers
+		void OnCreatePalette(wxCommandEvent& event);
+
 	private:
-		// SAFrame* m_pFrame;
+		SAFrame* m_pFrame;
 };
 
 #endif // SAVIEW_H
