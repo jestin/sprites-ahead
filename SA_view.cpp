@@ -51,6 +51,7 @@ void SAView::OnCreatePalette(wxCommandEvent &event)
 	pDoc->GetCommandProcessor()->Submit(
 			new SACreatePaletteCommand(wxT("Create Palette"),
 				SACreatePaletteCommand::CREATE_PALETTE,
-				pDoc)
+				pDoc,
+				m_pFrame)
 			);
 }

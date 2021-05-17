@@ -32,7 +32,7 @@ SAFrame::SAFrame(wxDocManager* pManager,
 	wxMenu *menuFile = new wxMenu;
 	menuFile->Append(wxID_NEW, "&New Project");
 	menuFile->Append(ID_NEW_PALETTE, "New &Palette\tCtrl+P");
-	menuFile->Append(ID_NEW_SPRITE, "New &Sprite\tCtrl+S");
+	menuFile->Append(ID_NEW_SPRITE, "New Spr&ite\tCtrl+Alt+S");
 	menuFile->Append(wxID_OPEN, "&Open");
 	menuFile->Append(wxID_SAVE, "&Save");
 	menuFile->AppendSeparator();

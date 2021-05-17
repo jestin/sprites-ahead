@@ -4,6 +4,9 @@
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
 #include "SA_document.h"
+#include "SA_palette_frame.h"
+
+class SAFrame;
 
 class SACreatePaletteCommand : public wxCommand
 {
@@ -15,7 +18,8 @@ class SACreatePaletteCommand : public wxCommand
 
 		SACreatePaletteCommand(const wxString& name,
 				CreatePaletteOperation op,
-				SADocument* pDoc);
+				SADocument* pDoc,
+				SAFrame* pParentFrame);
 		~SACreatePaletteCommand();
 
 		// Overrides
@@ -28,6 +32,7 @@ class SACreatePaletteCommand : public wxCommand
 	private:
 		SADocument* m_pDoc;
 		CreatePaletteOperation m_op;
+		SAFrame* m_pParentFrame;
 };
 
 #endif // SA_CREATE_PALETEE_COMMAND_H
