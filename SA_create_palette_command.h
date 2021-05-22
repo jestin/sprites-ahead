@@ -4,7 +4,6 @@
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
 #include "SA_document.h"
-#include "SA_palette_frame.h"
 
 class SAFrame;
 

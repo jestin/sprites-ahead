@@ -1,5 +1,6 @@
 #include "SA_view.h"
 #include "SA_create_palette_command.h"
+#include "SA_create_sprite_command.h"
 
 IMPLEMENT_DYNAMIC_CLASS(SAView, wxView)
 
@@ -51,6 +52,18 @@ void SAView::OnCreatePalette(wxCommandEvent &event)
 	pDoc->GetCommandProcessor()->Submit(
 			new SACreatePaletteCommand(wxT("Create Palette"),
 				SACreatePaletteCommand::CREATE_PALETTE,
+				pDoc,
+				m_pFrame)
+			);
+}
+
+void SAView::OnCreateSprite(wxCommandEvent &event)
+{
+	SADocument* pDoc = (SADocument*) GetDocument();
+	if(pDoc == NULL) return;
+	pDoc->GetCommandProcessor()->Submit(
+			new SACreateSpriteCommand(wxT("Create Sprite"),
+				SACreateSpriteCommand::CREATE_SPRITE,
 				pDoc,
 				m_pFrame)
 			);

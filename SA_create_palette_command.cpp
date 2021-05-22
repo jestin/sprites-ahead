@@ -1,6 +1,7 @@
 #include "SA_create_palette_command.h"
 #include "SA_palette.h"
 #include "SA_frame.h"
+#include "SA_palette_frame.h"
 
 SACreatePaletteCommand::SACreatePaletteCommand(const wxString& name,
 		CreatePaletteOperation op,

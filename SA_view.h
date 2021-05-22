@@ -24,6 +24,7 @@ class SAView : public wxView
 
 		// Event Handlers
 		void OnCreatePalette(wxCommandEvent& event);
+		void OnCreateSprite(wxCommandEvent& event);
 
 	private:
 		SAFrame* m_pFrame;

@@ -55,9 +55,7 @@ void SAFrame::OnMenuNewProject(wxCommandEvent& event)
 
 void SAFrame::OnMenuNewSprite(wxCommandEvent& event)
 {
-	EditorFrame *f = new EditorFrame(this, "Test");
-	f->Show();
-	event.Skip();
+	m_pView->OnCreateSprite(event);
 }
 
 void SAFrame::OnMenuNewPalette(wxCommandEvent& event)
