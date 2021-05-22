@@ -1,5 +1,4 @@
 #include "canvas.h"
-#include "editor_frame.h"
 #include <wx/dcbuffer.h>
 
 wxBEGIN_EVENT_TABLE(Canvas, wxHVScrolledWindow)

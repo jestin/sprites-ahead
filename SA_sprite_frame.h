@@ -1,14 +1,14 @@
-#ifndef EDITOR_FRAME_H
-#define EDITOR_FRAME_H
+#ifndef SETPSPRITEFRAME_H
+#define SETPSPRITEFRAME_H
 
 #include <wx/wx.h>
 #include "canvas.h"
 
-class EditorFrame : public wxMDIChildFrame
+class SASpriteFrame : public wxMDIChildFrame
 {
 	public:
-		EditorFrame(wxMDIParentFrame *parent, wxString name);
-		~EditorFrame();
+		SASpriteFrame(wxMDIParentFrame *parent, wxString name);
+		~SASpriteFrame();
 
 		void OnZoomChange(int change);
 
@@ -25,4 +25,4 @@ class EditorFrame : public wxMDIChildFrame
 		DECLARE_EVENT_TABLE();
 };
 
-#endif // EDITOR_FRAME_H
+#endif // SETPSPRITEFRAME_H

@@ -1,7 +1,4 @@
 #include "SA_frame.h"
-#include "editor_frame.h"
-#include "SA_palette_frame.h"
-#include "SA_create_palette_command.h"
 
 #define ID_NEW_PALETTE 20001
 #define ID_NEW_SPRITE 20002

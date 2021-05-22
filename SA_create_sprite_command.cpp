@@ -1,7 +1,7 @@
 #include "SA_create_sprite_command.h"
 #include "SA_sprite.h"
 #include "SA_frame.h"
-#include "editor_frame.h"
+#include "SA_sprite_frame.h"
 
 SACreateSpriteCommand::SACreateSpriteCommand(const wxString& name,
 		CreateSpriteOperation op,
@@ -39,7 +39,7 @@ bool SACreateSpriteCommand::DoOrUndo(CreateSpriteOperation op)
 				m_pDoc->GetSprites().Append(new SASprite());
 
 				// create frame
-				EditorFrame *f = new EditorFrame(m_pParentFrame, "Sprite");
+				SASpriteFrame *f = new SASpriteFrame(m_pParentFrame, "Sprite");
 				f->Show();
 				break;
 			}

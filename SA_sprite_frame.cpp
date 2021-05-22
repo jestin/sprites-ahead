@@ -1,11 +1,11 @@
-#include "editor_frame.h"
+#include "SA_sprite_frame.h"
 
-BEGIN_EVENT_TABLE(EditorFrame, wxMDIChildFrame)
-	EVT_CLOSE(EditorFrame::OnCloseWindow)
-	EVT_CANVAS_ZOOM_CHANGED(wxID_ANY, EditorFrame::OnZoomChanged)
+BEGIN_EVENT_TABLE(SASpriteFrame, wxMDIChildFrame)
+	EVT_CLOSE(SASpriteFrame::OnCloseWindow)
+	EVT_CANVAS_ZOOM_CHANGED(wxID_ANY, SASpriteFrame::OnZoomChanged)
 END_EVENT_TABLE()
 
-EditorFrame::EditorFrame(wxMDIParentFrame *parent, wxString name)
+SASpriteFrame::SASpriteFrame(wxMDIParentFrame *parent, wxString name)
 	: wxMDIChildFrame(parent, wxID_ANY, name)
 {
 	m_Canvas = new Canvas(this);
@@ -41,7 +41,7 @@ EditorFrame::EditorFrame(wxMDIParentFrame *parent, wxString name)
 				wxSize(40,20), 
 				0);
 		b->SetBackgroundColour(palette[i]);
-		b->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(EditorFrame::OnSelectColor), NULL);
+		b->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(SASpriteFrame::OnSelectColor), NULL);
 		toolBar->AddControl(b);
 	}
 
@@ -52,26 +52,26 @@ EditorFrame::EditorFrame(wxMDIParentFrame *parent, wxString name)
 			wxDefaultPosition, 
 			wxSize(40,20), 
 			0);
-	b->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(EditorFrame::OnSelectColor), NULL);
+	b->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(SASpriteFrame::OnSelectColor), NULL);
 	toolBar->AddControl(b);
 
 	toolBar->Realize();
 }
 
-EditorFrame::~EditorFrame()
+SASpriteFrame::~SASpriteFrame()
 {
 }
 
-void EditorFrame::OnZoomChanged(wxCanvasEvent &event)
+void SASpriteFrame::OnZoomChanged(wxCanvasEvent &event)
 {
 	m_StatusBar->SetStatusText(wxString("Zoom: ") << event.zoom, 1);
 }
 
-void EditorFrame::OnCloseWindow(wxCloseEvent &event)
+void SASpriteFrame::OnCloseWindow(wxCloseEvent &event)
 {
 }
 
-void EditorFrame::OnSelectColor(wxCommandEvent &evvent)
+void SASpriteFrame::OnSelectColor(wxCommandEvent &evvent)
 {
 }
 
