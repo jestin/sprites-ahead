@@ -1,5 +1,4 @@
-#ifndef SAPALETTECANVAS_H
-#define SAPALETTECANVAS_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/vscroll.h>
@@ -31,6 +30,3 @@ class SAPaletteCanvas : public wxHVScrolledWindow
 	private:
 		DECLARE_EVENT_TABLE();
 };
-
-#endif // SAPALETTECANVAS_H
-

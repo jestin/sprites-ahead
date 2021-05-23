@@ -1,5 +1,4 @@
-#ifndef SET_ACTIVE_PALETTE_COMMAND_H
-#define SET_ACTIVE_PALETTE_COMMAND_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
@@ -31,6 +30,3 @@ class SetActivePaletteCommand : public wxCommand
 		SADocument* m_pDoc;
 		int8_t m_nActivePalette;
 };
-
-#endif // SET_ACTIVE_PALETTE_COMMAND_H
-

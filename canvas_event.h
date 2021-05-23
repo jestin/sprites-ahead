@@ -1,5 +1,4 @@
-#ifndef wxCANVAS_EVENT_H
-#define wxCANVAS_EVENT_H
+#pragma once
 
 #include <wx/wx.h>
 
@@ -45,6 +44,3 @@ END_DECLARE_EVENT_TYPES()
 		wxEVT_CANVAS_ZOOM_OUT, id, -1, (wxObjectEventFunction) \
 		(wxEventFunction) (wxCanvasEventFunction) & fn, \
 		(wxObject *) NULL ),
-
-
-#endif // wxCANVAS_EVENT_H

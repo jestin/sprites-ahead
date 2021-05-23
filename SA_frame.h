@@ -1,5 +1,4 @@
-#ifndef SA_FRAME_H
-#define SA_FRAME_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/docmdi.h>
@@ -35,5 +34,3 @@ class SAFrame : public wxDocMDIParentFrame
 
 		wxDECLARE_EVENT_TABLE();
 };
-
-#endif //MAIN_FRAME_H

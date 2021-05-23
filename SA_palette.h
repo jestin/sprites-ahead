@@ -1,5 +1,4 @@
-#ifndef SA_PALETTE_H
-#define SA_PALETTE_H
+#pragma once
 
 #include <wx/wx.h>
 
@@ -25,5 +24,3 @@ class SAPalette : public wxObject
 		int8_t m_nColors;
 		std::vector<wxColor> m_aColors;
 };
-
-#endif // SA_PALETTE_H

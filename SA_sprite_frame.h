@@ -1,5 +1,4 @@
-#ifndef SETPSPRITEFRAME_H
-#define SETPSPRITEFRAME_H
+#pragma once
 
 #include <wx/wx.h>
 #include "canvas.h"
@@ -24,5 +23,3 @@ class SASpriteFrame : public wxMDIChildFrame
 
 		DECLARE_EVENT_TABLE();
 };
-
-#endif // SETPSPRITEFRAME_H

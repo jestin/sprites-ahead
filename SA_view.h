@@ -1,5 +1,4 @@
-#ifndef SAVIEW_H
-#define SAVIEW_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/docview.h>
@@ -29,6 +28,3 @@ class SAView : public wxView
 	private:
 		SAFrame* m_pFrame;
 };
-
-#endif // SAVIEW_H
-

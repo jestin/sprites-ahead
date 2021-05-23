@@ -1,5 +1,4 @@
-#ifndef SA_SPRITE_H
-#define SA_SPRITE_H
+#pragma once
 
 #include <wx/wx.h>
 
@@ -23,5 +22,3 @@ class SASprite : public wxObject
 		wxSize m_Size;
 		int* m_aPixels;
 };
-
-#endif // SA_SPRITE_H

@@ -1,5 +1,4 @@
-#ifndef SAPALETTEFRAME_H
-#define SAPALETTEFRAME_H
+#pragma once
 
 #include <wx/wx.h>
 #include "SA_palette_canvas.h"
@@ -23,6 +22,3 @@ class SAPaletteFrame : public wxMDIChildFrame
 
 		DECLARE_EVENT_TABLE();
 };
-
-#endif // SAPALETTEFRAME_H
-

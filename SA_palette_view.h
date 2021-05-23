@@ -1,5 +1,4 @@
-#ifndef SAPALETTEVIEW_H
-#define SAPALETTEVIEW_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/docview.h>
@@ -32,6 +31,3 @@ class SAPaletteView : public wxView
 		SAPalette* m_pPalette;
 		SAPaletteFrame* m_pFrame;
 };
-
-#endif // SAPALETTEVIEW_H
-

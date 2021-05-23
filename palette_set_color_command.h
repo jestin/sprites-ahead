@@ -1,5 +1,4 @@
-#ifndef PALETTE_SET_COLOR_COMMAND_H
-#define PALETTE_SET_COLOR_COMMAND_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
@@ -36,6 +35,3 @@ class PaletteSetColorCommand : public wxCommand
 		wxColor m_Color;
 		int8_t m_nIndex;
 };
-
-#endif // PALETTE_SET_COLOR_COMMAND_H
-

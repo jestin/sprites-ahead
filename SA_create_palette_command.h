@@ -1,5 +1,4 @@
-#ifndef SA_CREATE_PALETEE_COMMAND_H
-#define SA_CREATE_PALETEE_COMMAND_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
@@ -33,6 +32,3 @@ class SACreatePaletteCommand : public wxCommand
 		CreatePaletteOperation m_op;
 		SAFrame* m_pParentFrame;
 };
-
-#endif // SA_CREATE_PALETEE_COMMAND_H
-

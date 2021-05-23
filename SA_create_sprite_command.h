@@ -1,5 +1,4 @@
-#ifndef SACREATESPRITECOMMAND_H
-#define SACREATESPRITECOMMAND_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/cmdproc.h>
@@ -33,6 +32,3 @@ class SACreateSpriteCommand : public wxCommand
 		CreateSpriteOperation m_op;
 		SAFrame* m_pParentFrame;
 };
-
-#endif // SACREATESPRITECOMMAND_H
-

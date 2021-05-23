@@ -1,5 +1,4 @@
-#ifndef SA_DOCUMENT_H
-#define SA_DOCUMENT_H
+#pragma once
 
 #include <wx/wx.h>
 #include <wx/docview.h>
@@ -34,5 +33,3 @@ class SADocument : public wxDocument
 		wxList m_Sprites;
 		int8_t m_nActivePalette;
 };
-
-#endif // SA_DOCUMENT_H
