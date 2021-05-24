@@ -14,12 +14,12 @@ wxBEGIN_EVENT_TABLE(SAFrame, wxDocMDIParentFrame)
 wxEND_EVENT_TABLE()
 
 SAFrame::SAFrame(wxDocManager* pManager,
-				wxFrame* pFrame,
-				wxWindowID id,
-				const wxString& title,
-				const wxPoint& pos,
-				const wxSize& size,
-				long type)
+		wxFrame* pFrame,
+		wxWindowID id,
+		const wxString& title,
+		const wxPoint& pos,
+		const wxSize& size,
+		long type)
 	: wxDocMDIParentFrame(pManager, pFrame, id, title, pos, size, type)
 {
 	// create menus
