@@ -15,10 +15,10 @@ class SASprite : public wxObject
 		std::istream& LoadObject(std::istream& stream);
 
 		// accessors
-		inline int* GetPixels() const { return m_aPixels; }
+		inline std::vector<int> GetPixels() const { return m_vPixels; }
 		inline wxSize& GetSize() { return m_Size; }
 
 	private:
 		wxSize m_Size;
-		int* m_aPixels;
+		std::vector<int> m_vPixels;
 };

@@ -7,17 +7,17 @@ SASprite::SASprite()
 SASprite::SASprite(SASprite& sprite)
 {
 	m_Size = sprite.GetSize();
-	m_aPixels = new int[m_Size.x * m_Size.y];
 
-	for(int i = 0; i < m_Size.x * m_Size.y; i++)
-	{
-		m_aPixels[i] = sprite.GetPixels()[i];
-	}
+	// pre-allocate the memory to prevent copies during inserts
+	m_vPixels.reserve(m_Size.x * m_Size.y);
+
+	std::copy(sprite.GetPixels().begin(),
+			sprite.GetPixels().end(),
+			std::back_inserter(m_vPixels));
 }
 
 SASprite::~SASprite()
 {
-	delete[] m_aPixels;
 }
 
 std::ostream& SASprite::SaveObject(std::ostream& stream)
@@ -26,7 +26,7 @@ std::ostream& SASprite::SaveObject(std::ostream& stream)
 
 	for(int i = 0; i < m_Size.GetWidth() * m_Size.GetHeight(); i++) 
 	{
-		stream << m_aPixels[i] << '\n';
+		stream << m_vPixels[i] << '\n';
 	}
 	stream << '\n';
 
@@ -44,7 +44,7 @@ std::istream& SASprite::LoadObject(std::istream &stream)
 
 	for(int i = 0; i < w * h; i++)
 	{
-		stream >> m_aPixels[i];
+		stream >> m_vPixels[i];
 	}
 
 	return stream;
